@@ -1,0 +1,2656 @@
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  background: #fffaf4;
+  color: #39281f;
+  line-height: 1.7;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  width: 100%;
+  height: 76px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(77, 21, 52, 0.96);
+  box-shadow: 0 4px 20px rgba(0,0,0,.12);
+}
+
+.logo {
+  color: #fff;
+  font-size: 21px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.logo span {
+  margin-right: 6px;
+}
+
+.navbar {
+  display: flex;
+  gap: 25px;
+}
+
+.navbar a {
+  color: #fff;
+  font-size: 15px;
+  transition: .3s;
+}
+
+.navbar a:hover {
+  color: #ffd59c;
+}
+
+.menu-btn {
+  display: none;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+/* =========================
+   PREMIUM HERO
+========================= */
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 130px 20px 80px;
+
+  background:
+    url("images/hero/hero.jpg")
+    center center / cover no-repeat;
+
+  overflow: hidden;
+}
+
+
+/* DARK PREMIUM OVERLAY */
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(35, 8, 25, 0.35),
+      rgba(35, 8, 25, 0.70)
+    );
+
+  z-index: 1;
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 900px;
+
+  color: white;
+
+  padding: 20px;
+}
+
+
+/* RADHE RADHE */
+
+.small-title {
+  color: #ffd99d;
+
+  font-size: 22px;
+  font-weight: 600;
+
+  margin-bottom: 15px;
+
+  letter-spacing: 1px;
+}
+
+
+/* MAIN TITLE */
+
+.hero h1 {
+  font-family:
+    "Playfair Display",
+    "Noto Sans Devanagari",
+    serif;
+
+  font-size:
+    clamp(48px, 8vw, 86px);
+
+  line-height: 1.1;
+
+  margin-bottom: 15px;
+
+  color: white;
+
+  text-shadow:
+    0 4px 20px rgba(0,0,0,.35);
+}
+
+
+/* SUB TITLE */
+
+.hero h2 {
+  font-size:
+    clamp(22px, 4vw, 35px);
+
+  font-weight: 500;
+
+  color: #ffe4bd;
+
+  margin-bottom: 10px;
+
+  text-shadow:
+    0 3px 15px rgba(0,0,0,.35);
+}
+
+
+/* BUTTONS */
+
+.hero-buttons {
+
+  margin-top: 32px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+}
+
+
+/* COMMON BUTTON */
+
+.hero-buttons .btn {
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 155px;
+
+  padding: 14px 25px;
+
+  border-radius: 35px;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    background .3s ease;
+}
+
+
+/* TEMPLE BUTTON */
+
+.hero-buttons .primary-btn {
+
+  background:
+    linear-gradient(
+      135deg,
+      #f7b955,
+      #e79a35
+    );
+
+  color: #42152e;
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.20);
+}
+
+
+/* PHOTO BUTTON */
+
+.hero-buttons .secondary-btn {
+
+  background:
+    rgba(255,255,255,.12);
+
+  color: white;
+
+  border:
+    1px solid rgba(255,255,255,.75);
+
+  backdrop-filter:
+    blur(6px);
+}
+
+
+/* BUTTON HOVER */
+
+.hero-buttons .btn:hover {
+
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.25);
+}
+
+
+/* MOBILE HERO */
+
+@media (max-width: 750px) {
+
+  .hero {
+
+    min-height: 90vh;
+
+    padding:
+      120px 18px 70px;
+
+    background-position:
+      center center;
+  }
+
+  .hero-content {
+    padding: 10px;
+  }
+
+  .small-title {
+    font-size: 18px;
+  }
+
+  .hero h1 {
+    font-size: clamp(42px, 12vw, 65px);
+  }
+
+  .hero h2 {
+    font-size: 21px;
+  }
+
+  .hero-buttons {
+    margin-top: 25px;
+  }
+
+  .hero-buttons .btn {
+    min-width: 145px;
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      rgba(50, 12, 32, .45),
+      rgba(50, 12, 32, .75)
+    );
+}
+
+.hero-content {
+  position: relative;
+  max-width: 850px;
+  color: white;
+}
+
+.small-title {
+  color: #ffd89e;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-family: "Playfair Display",
+               "Noto Sans Devanagari",
+               serif;
+  font-size: clamp(48px, 8vw, 85px);
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-size: clamp(22px, 4vw, 34px);
+  font-weight: 500;
+  color: #ffe2b6;
+  margin-bottom: 20px;
+}
+
+.hero-content > p:not(.small-title) {
+  max-width: 700px;
+  margin: auto;
+  font-size: 18px;
+}
+
+.hero-buttons {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 13px 27px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.primary-btn {
+  background: #f5b04c;
+  color: #42152e;
+}
+
+.secondary-btn {
+  border: 1px solid white;
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+
+/* =========================
+   GENERAL HEADINGS
+========================= */
+
+.section-heading {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 45px;
+}
+
+.section-heading span,
+.section-tag {
+  color: #a43e69;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.section-heading h2,
+.about-content h2,
+.feature-content h2 {
+  color: #511a36;
+  font-size: clamp(29px, 4vw, 44px);
+  line-height: 1.3;
+  margin: 8px 0 12px;
+}
+
+.section-heading p {
+  color: #78655c;
+}
+
+
+/* =========================
+   QUICK CARDS
+========================= */
+
+.quick-section {
+  padding: 85px 7%;
+}
+
+.quick-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns:
+    repeat(6, 1fr);
+  gap: 16px;
+}
+
+.quick-card {
+  background: white;
+  text-align: center;
+  padding: 28px 12px;
+  border-radius: 16px;
+  box-shadow: 0 7px 28px rgba(73,32,46,.08);
+  transition: .3s;
+}
+
+.quick-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 14px 35px rgba(73,32,46,.15);
+}
+
+.quick-card div {
+  font-size: 34px;
+}
+
+.quick-card h3 {
+  color: #6c2345;
+  margin: 7px 0;
+}
+
+.quick-card p {
+  color: #88756d;
+  font-size: 13px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-section,
+.feature-section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 90px 7%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.about-image img,
+.feature-image img {
+  height: 520px;
+  object-fit: cover;
+  border-radius: 22px;
+  box-shadow: 0 15px 40px rgba(67,25,43,.15);
+}
+
+.about-content p,
+.feature-content p {
+  margin: 16px 0;
+  color: #67534a;
+}
+
+.quote {
+  border-left: 4px solid #d69851;
+  padding: 15px 20px;
+  background: #fff4e4;
+  font-style: italic;
+}
+
+.feature-section.reverse
+.feature-content {
+  order: 2;
+}
+
+.feature-section.reverse
+.feature-image {
+  order: 1;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #a43e69;
+  font-weight: 700;
+}
+
+
+/* =========================
+   TEMPLES
+========================= */
+
+.temples-section {
+  padding: 90px 7%;
+  background: #fff;
+}
+
+.temple-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns:
+    repeat(4, 1fr);
+  gap: 25px;
+}
+
+.temple-card {
+  overflow: hidden;
+  background: #fffaf5;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.08);
+  transition: .3s;
+}
+
+.temple-card:hover {
+  transform: translateY(-7px);
+}
+
+.temple-card img {
+  height: 245px;
+  object-fit: cover;
+}
+
+.temple-info {
+  padding: 22px;
+}
+
+.temple-info h3 {
+  color: #6c2345;
+  margin-bottom: 10px;
+}
+
+.temple-info p {
+  color: #725f56;
+  font-size: 14px;
+}
+
+.more-temples {
+  max-width: 1100px;
+  margin: 60px auto 0;
+  text-align: center;
+}
+
+.more-temples h3 {
+  color: #511a36;
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.temple-name-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.temple-name-grid span {
+  padding: 10px 17px;
+  border-radius: 30px;
+  background: #fff1e2;
+  color: #79294e;
+}
+
+
+/* =========================
+   BRAJ
+========================= */
+
+.braj-section {
+  padding: 90px 7%;
+  background:
+    linear-gradient(135deg,#501630,#7b2c51);
+}
+
+.light-heading h2,
+.light-heading p,
+.light-heading span {
+  color: white;
+}
+
+.braj-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns:
+    repeat(2,1fr);
+  gap: 25px;
+}
+
+.braj-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 190px 1fr;
+}
+
+.braj-card img {
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+}
+
+.braj-card div {
+  padding: 28px;
+}
+
+.braj-card h3 {
+  color: #6c2345;
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+
+.braj-card p {
+  color: #735f56;
+}
+
+
+/* =========================
+   PARIKRAMA
+========================= */
+
+.parikrama-section {
+  padding: 90px 7%;
+}
+
+.parikrama-box {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+  padding: 60px;
+  border-radius: 25px;
+  background:
+    linear-gradient(135deg,#fff0d9,#fff9ef);
+  box-shadow: 0 12px 40px rgba(100,50,20,.08);
+}
+
+.parikrama-box > span {
+  color: #a43e69;
+  font-weight: bold;
+}
+
+.parikrama-box h2 {
+  color: #511a36;
+  font-size: 38px;
+  margin: 10px 0 15px;
+}
+
+.parikrama-box p {
+  max-width: 760px;
+  margin: auto;
+  color: #705e55;
+}
+
+.places {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.places span {
+  background: #6c2345;
+  color: white;
+  padding: 8px 17px;
+  border-radius: 25px;
+}
+
+
+/* =========================
+   FESTIVALS
+========================= */
+
+.festival-section {
+  padding: 90px 7%;
+  background: white;
+}
+
+.festival-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns:
+    repeat(4,1fr);
+  gap: 22px;
+}
+
+.festival-card {
+  padding: 32px 20px;
+  text-align: center;
+  border-radius: 18px;
+  background: #fff8ee;
+}
+
+.festival-card div {
+  font-size: 42px;
+}
+
+.festival-card h3 {
+  color: #6c2345;
+  margin: 12px 0;
+}
+
+.festival-card p {
+  color: #77645a;
+  font-size: 14px;
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-section {
+  padding: 90px 7%;
+}
+
+.gallery-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.filter-btn {
+  border: 1px solid #8d365e;
+  color: #76264d;
+  background: transparent;
+  padding: 9px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: #76264d;
+  color: white;
+}
+
+.gallery-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns:
+    repeat(3,1fr);
+  gap: 14px;
+}
+
+.gallery-img {
+  height: 330px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.02);
+}
+
+
+/* =========================
+   YATRA
+========================= */
+
+.yatra-section {
+  padding: 90px 7%;
+  background: #5b1d3b;
+}
+
+.yatra-grid {
+  max-width: 1050px;
+  margin: auto;
+  display: grid;
+  grid-template-columns:
+    repeat(3,1fr);
+  gap: 25px;
+}
+
+.yatra-card {
+  background: white;
+  padding: 35px 25px;
+  border-radius: 18px;
+  text-align: center;
+}
+
+.yatra-card div {
+  font-size: 40px;
+}
+
+.yatra-card h3 {
+  color: #6c2345;
+  margin: 10px 0;
+}
+
+.yatra-card p {
+  color: #756158;
+}
+
+
+/* =========================
+   FINAL MESSAGE
+========================= */
+
+.final-message {
+  padding: 100px 20px;
+  text-align: center;
+  background: #fff6e8;
+}
+
+.final-message div {
+  max-width: 750px;
+  margin: auto;
+}
+
+.final-message > div > p:first-child {
+  color: #a43e69;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.final-message h2 {
+  color: #511a36;
+  font-size: 36px;
+  margin: 12px 0;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  padding: 45px 20px;
+  background: #2d0c20;
+  color: #ead9df;
+  text-align: center;
+}
+
+.footer-logo {
+  color: white;
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.copyright {
+  margin-top: 15px;
+  font-size: 13px;
+  opacity: .7;
+}
+
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0,0,0,.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 900px;
+  max-height: 85vh;
+  width: auto;
+  border-radius: 8px;
+}
+
+#closeLightbox {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 45px;
+  cursor: pointer;
+}
+
+
+/* =========================
+   TOP BUTTON
+========================= */
+
+#topBtn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 50%;
+  background: #7b2c51;
+  color: white;
+  cursor: pointer;
+  display: none;
+  font-size: 20px;
+  z-index: 900;
+}
+
+/* =========================
+   COMPLETE VRINDAVAN GUIDE
+========================= */
+
+.complete-guide {
+  padding: 90px 7%;
+  background:
+    linear-gradient(
+      180deg,
+      #fffaf4,
+      #fff2e1
+    );
+}
+
+.search-box {
+  max-width: 600px;
+  margin: 0 auto 45px;
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 17px 55px 17px 22px;
+  border: 1px solid #e1c3b0;
+  border-radius: 40px;
+  outline: none;
+  background: white;
+  font-size: 16px;
+  color: #4d1534;
+  box-shadow:
+    0 7px 25px rgba(80,30,50,.08);
+}
+
+.search-box input:focus {
+  border-color: #8b315a;
+}
+
+.search-box span {
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.place-grid {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap: 22px;
+}
+
+.place-card {
+  background: white;
+  border-radius: 18px;
+  padding: 30px 22px;
+  text-align: center;
+
+  box-shadow:
+    0 8px 30px rgba(76,27,47,.08);
+
+  transition: .3s;
+}
+
+.place-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 15px 35px rgba(76,27,47,.14);
+}
+
+.place-icon {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.place-card h3 {
+  color: #682241;
+  margin-bottom: 10px;
+}
+
+.place-card p {
+  color: #79665c;
+  font-size: 14px;
+  min-height: 70px;
+}
+
+.details-btn {
+  margin-top: 17px;
+
+  padding: 10px 20px;
+
+  border: none;
+  border-radius: 25px;
+
+  background: #7b2c51;
+  color: white;
+
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+.details-btn:hover {
+  background: #a3476d;
+}
+
+
+/* NO SEARCH RESULT */
+
+#noResult {
+  display: none;
+  text-align: center;
+  margin-top: 35px;
+  color: #7b2c51;
+  font-weight: bold;
+}
+
+
+/* =========================
+   PLACE INFORMATION POPUP
+========================= */
+
+.place-modal {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(30,5,20,.85);
+
+  z-index: 3000;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+}
+
+.place-modal.active {
+  display: flex;
+}
+
+.modal-box {
+  width: 100%;
+  max-width: 700px;
+  max-height: 85vh;
+  overflow-y: auto;
+
+  background: #fffaf4;
+
+  padding: 45px;
+
+  border-radius: 22px;
+
+  position: relative;
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.3);
+}
+
+#closeModal {
+  position: absolute;
+  right: 20px;
+  top: 12px;
+
+  border: none;
+  background: transparent;
+
+  font-size: 36px;
+  color: #692443;
+
+  cursor: pointer;
+}
+
+.modal-icon {
+  text-align: center;
+  font-size: 50px;
+}
+
+.modal-box h2 {
+  color: #591d39;
+  text-align: center;
+
+  font-size: 31px;
+
+  margin: 10px 0 22px;
+}
+
+#modalDescription p {
+  color: #68554c;
+  margin: 14px 0;
+}
+
+#modalDescription h3 {
+  color: #8d365e;
+  margin-top: 22px;
+}
+@media(max-width:1000px) {
+   /* mobile/tablet code */
+}
+
+@media(max-width:600px) {
+   /* mobile code */
+}
+
+/* TABLET */
+
+@media(max-width:1000px) {
+
+  .place-grid {
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px) {
+
+  .complete-guide {
+    padding: 70px 5%;
+  }
+
+  .place-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .place-card p {
+    min-height: auto;
+  }
+
+  .modal-box {
+    padding: 40px 22px 30px;
+  }
+
+  .modal-box h2 {
+    font-size: 25px;
+  }
+
+}
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .menu-btn {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 76px;
+    left: 0;
+    width: 100%;
+    background: #4d1534;
+    padding: 25px;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .quick-grid {
+    grid-template-columns:
+      repeat(3,1fr);
+  }
+
+  .temple-grid {
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .festival-grid {
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 750px) {
+
+  .header {
+    padding: 0 5%;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .hero {
+    min-height: 90vh;
+  }
+
+  .hero-content > p:not(.small-title) {
+    font-size: 16px;
+  }
+
+  .quick-grid {
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .about-section,
+  .feature-section {
+    grid-template-columns: 1fr;
+    padding: 70px 6%;
+    gap: 35px;
+  }
+
+  .feature-section.reverse
+  .feature-content,
+  .feature-section.reverse
+  .feature-image {
+    order: initial;
+  }
+
+  .about-image img,
+  .feature-image img {
+    height: 400px;
+  }
+
+  .temple-grid,
+  .braj-grid,
+  .festival-grid,
+  .yatra-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .braj-card {
+    grid-template-columns: 1fr;
+  }
+
+  .braj-card img {
+    height: 250px;
+  }
+
+  .gallery-grid {
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .gallery-img {
+    height: 230px;
+  }
+
+  .parikrama-box {
+    padding: 40px 20px;
+  }
+
+  .parikrama-box h2,
+  .final-message h2 {
+    font-size: 29px;
+  }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 450px) {
+
+  .quick-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .quick-card {
+    padding: 22px 8px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-img {
+    height: 330px;
+  }
+
+}
+/* =========================
+   PROFESSIONAL GALLERY
+========================= */
+
+.pro-gallery {
+  padding: 100px 7%;
+  background: #fffaf4;
+}
+
+
+.pro-gallery-buttons {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+
+.gallery-filter {
+  border: 1px solid #87365c;
+  background: white;
+  color: #702447;
+
+  padding: 10px 20px;
+
+  border-radius: 30px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  transition: .3s;
+}
+
+
+.gallery-filter:hover,
+.gallery-filter.active {
+
+  background: #702447;
+  color: white;
+
+}
+
+
+.pro-gallery-grid {
+
+  max-width: 1250px;
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap: 15px;
+
+}
+
+
+.pro-photo {
+
+  position: relative;
+
+  height: 320px;
+
+  overflow: hidden;
+
+  border-radius: 15px;
+
+  cursor: pointer;
+
+  background: #eee;
+
+  box-shadow:
+    0 7px 22px rgba(50,20,35,.10);
+
+}
+
+
+.pro-photo img {
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform .5s;
+
+}
+
+
+.pro-photo:hover img {
+
+  transform: scale(1.07);
+
+}
+
+
+.pro-photo figcaption {
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding:
+    40px 15px 14px;
+
+  color: white;
+
+  font-size: 14px;
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(30,5,20,.85)
+    );
+
+}
+
+
+/* =========================
+   LOAD MORE
+========================= */
+
+.load-more-box {
+
+  margin-top: 45px;
+
+  text-align: center;
+
+}
+
+
+#loadMoreBtn {
+
+  border: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      #6b2145,
+      #a6446e
+    );
+
+  color: white;
+
+  padding: 13px 30px;
+
+  border-radius: 30px;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  box-shadow:
+    0 7px 20px rgba(80,25,50,.2);
+
+}
+
+
+#loadMoreBtn:hover {
+
+  transform: translateY(-2px);
+
+}
+
+
+/* =========================
+   PHOTO VIEWER
+========================= */
+
+.photo-viewer {
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 5000;
+
+  background:
+    rgba(15,3,10,.96);
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+}
+
+
+.photo-viewer.active {
+
+  display: flex;
+
+}
+
+
+.viewer-content {
+
+  max-width: 900px;
+  width: 100%;
+
+  text-align: center;
+
+}
+
+
+.viewer-content img {
+
+  width: auto;
+
+  max-width: 100%;
+  max-height: 78vh;
+
+  margin: auto;
+
+  object-fit: contain;
+
+  border-radius: 10px;
+
+}
+
+
+#viewerCaption {
+
+  color: white;
+
+  margin-top: 13px;
+
+  font-size: 17px;
+
+}
+
+
+.viewer-counter {
+
+  color: #e8c7d6;
+
+  font-size: 13px;
+
+  margin-top: 4px;
+
+}
+
+
+.viewer-close {
+
+  position: absolute;
+
+  top: 15px;
+  right: 25px;
+
+  border: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 45px;
+
+  cursor: pointer;
+
+}
+
+
+.viewer-arrow {
+
+  position: absolute;
+
+  top: 50%;
+
+  transform:
+    translateY(-50%);
+
+  width: 50px;
+  height: 50px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,255,255,.15);
+
+  color: white;
+
+  font-size: 25px;
+
+  cursor: pointer;
+
+}
+
+
+.viewer-prev {
+
+  left: 25px;
+
+}
+
+
+.viewer-next {
+
+  right: 25px;
+
+}
+
+
+.viewer-arrow:hover {
+
+  background:
+    rgba(255,255,255,.28);
+
+}
+
+
+/* =========================
+   TABLET GALLERY
+========================= */
+
+@media(max-width:1000px) {
+
+  .pro-gallery-grid {
+
+    grid-template-columns:
+      repeat(3,1fr);
+
+  }
+
+}
+
+
+/* =========================
+   MOBILE GALLERY
+========================= */
+
+@media(max-width:700px) {
+
+  .pro-gallery {
+
+    padding:
+      70px 5%;
+
+  }
+
+
+  .pro-gallery-grid {
+
+    grid-template-columns:
+      repeat(2,1fr);
+
+    gap: 9px;
+
+  }
+
+
+  .pro-photo {
+
+    height: 240px;
+
+  }
+
+
+  .viewer-arrow {
+
+    width: 40px;
+    height: 40px;
+
+    font-size: 19px;
+
+  }
+
+
+  .viewer-prev {
+
+    left: 8px;
+
+  }
+
+
+  .viewer-next {
+
+    right: 8px;
+
+  }
+
+}
+
+
+/* SMALL PHONE */
+
+@media(max-width:420px) {
+
+  .pro-photo {
+
+    height: 210px;
+
+  }
+
+}
+/* ==================================
+   YATRA PLANNER
+================================== */
+
+.yatra-planner {
+  padding: 100px 7%;
+  background: white;
+}
+
+.plan-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 45px;
+}
+
+.plan-btn {
+  padding: 11px 27px;
+  border: 1px solid #7b2c51;
+  background: transparent;
+  color: #7b2c51;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.plan-btn.active,
+.plan-btn:hover {
+  background: #7b2c51;
+  color: white;
+}
+
+.plan-content {
+  display: none;
+  max-width: 1050px;
+  margin: auto;
+}
+
+.plan-content.active {
+  display: block;
+}
+
+
+/* PLAN TITLE */
+
+.plan-title {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-bottom: 35px;
+}
+
+.plan-title > span {
+  font-size: 45px;
+}
+
+.plan-title h3 {
+  color: #5d1d3b;
+  font-size: 28px;
+}
+
+.plan-title p {
+  color: #806d63;
+}
+
+
+/* TIMELINE */
+
+.timeline {
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 20px;
+  bottom: 20px;
+  width: 2px;
+  background: #e9c8b2;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 20px;
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.timeline-number {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #74274b;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.timeline-info {
+  background: #fff8ef;
+  padding: 22px 25px;
+  border-radius: 15px;
+}
+
+.timeline-info span {
+  color: #a54d70;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.timeline-info h4 {
+  color: #5e1e3c;
+  font-size: 20px;
+  margin: 3px 0 6px;
+}
+
+.timeline-info p {
+  color: #75635a;
+}
+
+
+/* 2 DAY */
+
+.day-heading {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.day-heading span {
+  display: inline-block;
+  background: #76264d;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+
+.day-heading h3 {
+  color: #551a36;
+  font-size: 29px;
+  margin-top: 8px;
+}
+
+.second-day {
+  margin-top: 60px;
+}
+
+.simple-route {
+  background: #fff6e9;
+  border-radius: 18px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.simple-route span {
+  background: white;
+  color: #6f2548;
+  padding: 10px 15px;
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(60,20,40,.07);
+}
+
+.simple-route b {
+  color: #bb7851;
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 22px;
+}
+
+.destination-card {
+  text-align: center;
+  padding: 32px 22px;
+  background: #fff8ef;
+  border-radius: 18px;
+}
+
+.destination-card > div {
+  font-size: 42px;
+}
+
+.destination-card h4 {
+  color: #64213f;
+  font-size: 21px;
+  margin: 8px;
+}
+
+.destination-card p {
+  color: #756158;
+}
+
+
+/* 3 DAYS */
+
+.three-day-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+}
+
+.three-day-card {
+  padding: 35px 25px;
+  border-radius: 20px;
+  background: linear-gradient(
+    145deg,
+    #fff8ed,
+    #fff0dd
+  );
+}
+
+.day-number {
+  color: #9a4066;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.three-day-card h3 {
+  color: #5c1c3a;
+  margin: 10px 0 20px;
+  font-size: 22px;
+}
+
+.three-day-card p {
+  border-bottom: 1px solid #ead5c7;
+  padding: 9px 0;
+  color: #6e5a51;
+}
+
+
+/* ==================================
+   TRAVEL TIPS
+================================== */
+
+.travel-tips {
+  padding: 90px 7%;
+  background:
+    linear-gradient(
+      135deg,
+      #51162f,
+      #792a4d
+    );
+}
+
+.tips-container {
+  max-width: 1150px;
+  margin: auto;
+}
+
+.tips-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.tips-heading span {
+  color: #ffd8a4;
+}
+
+.tips-heading h2 {
+  color: white;
+  font-size: 38px;
+  margin-top: 5px;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 18px;
+}
+
+.tip-card {
+  background: rgba(255,255,255,.97);
+  border-radius: 16px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  gap: 13px;
+}
+
+.tip-card > span {
+  font-size: 30px;
+}
+
+.tip-card h3 {
+  color: #672140;
+  margin-bottom: 5px;
+}
+
+.tip-card p {
+  color: #705e55;
+  font-size: 14px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:750px) {
+
+  .yatra-planner {
+    padding: 70px 5%;
+  }
+
+  .destination-grid,
+  .three-day-grid,
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-title h3 {
+    font-size: 23px;
+  }
+
+  .simple-route {
+    flex-direction: column;
+  }
+
+  .simple-route b {
+    transform: rotate(90deg);
+  }
+
+  .tips-heading h2 {
+    font-size: 30px;
+  }
+
+}
+/* =====================================
+   TODAY DARSHAN
+===================================== */
+
+.today-darshan {
+  padding: 100px 7%;
+  background:
+    linear-gradient(
+      180deg,
+      #fffaf5,
+      #fff0df
+    );
+}
+
+
+.darshan-container {
+  max-width: 1000px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 30px;
+}
+
+
+.darshan-card {
+  background: white;
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 12px 40px
+    rgba(76, 25, 47, .12);
+
+  transition: .3s;
+}
+
+
+.darshan-card:hover {
+  transform:
+    translateY(-6px);
+}
+
+
+.darshan-image {
+  height: 500px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+.darshan-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform .6s;
+}
+
+
+.darshan-card:hover
+.darshan-image img {
+  transform:
+    scale(1.04);
+}
+
+
+.darshan-badge {
+  position: absolute;
+
+  top: 20px;
+  left: 20px;
+
+  background:
+    rgba(91, 28, 58, .92);
+
+  color: white;
+
+  padding:
+    7px 15px;
+
+  border-radius:
+    25px;
+
+  font-size:
+    13px;
+}
+
+
+.darshan-info {
+  padding:
+    27px;
+}
+
+
+.darshan-date {
+  color:
+    #a25273;
+
+  font-size:
+    13px;
+}
+
+
+.darshan-info h3 {
+  color:
+    #5d1c3a;
+
+  font-size:
+    25px;
+
+  margin:
+    7px 0;
+}
+
+
+.darshan-info p {
+  color:
+    #756158;
+}
+
+
+.favorite-btn {
+  margin-top:
+    17px;
+
+  border:
+    1px solid #87365c;
+
+  background:
+    transparent;
+
+  color:
+    #76264d;
+
+  padding:
+    9px 18px;
+
+  border-radius:
+    25px;
+
+  cursor:
+    pointer;
+
+  transition:
+    .3s;
+}
+
+
+.favorite-btn:hover,
+.favorite-btn.saved {
+
+  background:
+    #76264d;
+
+  color:
+    white;
+
+}
+
+
+/* =====================================
+   RADHE BANNER
+===================================== */
+
+.radhe-banner {
+
+  padding:
+    100px 20px;
+
+  text-align:
+    center;
+
+  color:
+    white;
+
+  background:
+    linear-gradient(
+      rgba(63, 13, 40, .75),
+      rgba(63, 13, 40, .85)
+    ),
+    url("images/vrindavan1.jpg")
+    center/cover
+    fixed;
+
+}
+
+
+.radhe-decoration {
+  font-size:
+    45px;
+}
+
+
+.radhe-banner > p:first-of-type {
+  color:
+    #ffd7a3;
+
+  font-size:
+    18px;
+}
+
+
+.radhe-banner h2 {
+
+  font-size:
+    clamp(
+      50px,
+      8vw,
+      90px
+    );
+
+  line-height:
+    1.2;
+
+  margin:
+    5px 0 15px;
+
+  color:
+    #fff4de;
+
+}
+
+
+.banner-message {
+
+  max-width:
+    650px;
+
+  margin:
+    auto;
+
+  font-size:
+    17px;
+
+}
+
+
+/* =====================================
+   SHARE SECTION
+===================================== */
+
+.share-section {
+
+  padding:
+    90px 7%;
+
+  background:
+    white;
+
+}
+
+
+.share-container {
+
+  max-width:
+    1000px;
+
+  margin:
+    auto;
+
+  text-align:
+    center;
+
+  padding:
+    55px 35px;
+
+  border-radius:
+    25px;
+
+  background:
+    #fff6e9;
+
+  box-shadow:
+    0 10px 35px
+    rgba(80, 30, 45, .08);
+
+}
+
+
+.share-text span {
+
+  color:
+    #a3486e;
+
+  font-weight:
+    600;
+
+}
+
+
+.share-text h2 {
+
+  color:
+    #571b38;
+
+  font-size:
+    34px;
+
+  margin:
+    8px 0 12px;
+
+}
+
+
+.share-text p {
+
+  max-width:
+    650px;
+
+  margin:
+    auto;
+
+  color:
+    #756158;
+
+}
+
+
+.share-buttons {
+
+  margin-top:
+    30px;
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    12px;
+
+}
+
+
+.share-btn {
+
+  border:
+    none;
+
+  padding:
+    12px 22px;
+
+  border-radius:
+    28px;
+
+  cursor:
+    pointer;
+
+  font-size:
+    14px;
+
+  transition:
+    .3s;
+
+}
+
+
+.share-btn:hover {
+
+  transform:
+    translateY(-3px);
+
+}
+
+
+.whatsapp-share {
+
+  background:
+    #217b4b;
+
+  color:
+    white;
+
+}
+
+
+.native-share {
+
+  background:
+    #76264d;
+
+  color:
+    white;
+
+}
+
+
+.copy-share {
+
+  background:
+    white;
+
+  color:
+    #692443;
+
+  border:
+    1px solid #d8b6c6;
+
+}
+
+
+#copyMessage {
+
+  display:
+    none;
+
+  margin-top:
+    20px;
+
+  color:
+    #267247;
+
+  font-weight:
+    600;
+
+}
+
+
+/* =====================================
+   FAVORITE MESSAGE
+===================================== */
+
+.favorite-message {
+
+  position:
+    fixed;
+
+  left:
+    50%;
+
+  bottom:
+    30px;
+
+  transform:
+    translateX(-50%);
+
+  z-index:
+    6000;
+
+  background:
+    #521934;
+
+  color:
+    white;
+
+  padding:
+    12px 22px;
+
+  border-radius:
+    30px;
+
+  box-shadow:
+    0 7px 25px
+    rgba(0, 0, 0, .25);
+
+  display:
+    none;
+
+  white-space:
+    nowrap;
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media(max-width:750px) {
+
+  .today-darshan {
+
+    padding:
+      70px 5%;
+
+  }
+
+
+  .darshan-container {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .darshan-image {
+
+    height:
+      430px;
+
+  }
+
+
+  .radhe-banner {
+
+    background-attachment:
+      scroll;
+
+  }
+
+
+  .share-container {
+
+    padding:
+      40px 18px;
+
+  }
+
+
+  .share-text h2 {
+
+    font-size:
+      27px;
+
+  }
+
+
+  .share-buttons {
+
+    flex-direction:
+      column;
+
+  }
+
+
+  .share-btn {
+
+    width:
+      100%;
+
+  }
+
+}
